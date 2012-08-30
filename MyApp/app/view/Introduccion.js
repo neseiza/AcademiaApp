@@ -33,7 +33,7 @@ Ext.define("MyApp.view.Introduccion", {
                 id:'back',
                 align: 'left',
                 text: "Regresar",
-                ui: "action",
+                ui: "back",
             }
             ]
         },

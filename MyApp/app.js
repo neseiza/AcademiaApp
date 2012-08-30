@@ -11,7 +11,7 @@ Ext.application({
         'Ext.MessageBox'
     ],
 
-    views: ['Main','Introduccion','Musica','Noticias'],
+    views: ['BibliografiaMujeres','BibliografiaHombres','Musica','mainMenu','GaleriaFotos','GaleriaVideos','BibliografiaMenu','GaleriaMenu','Introduccion','Noticias','Karaoke'],
 
     controllers: ['Main'],
     
