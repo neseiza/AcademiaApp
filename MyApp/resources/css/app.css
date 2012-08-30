@@ -6755,7 +6755,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .panelBackground{
-	background:url(../images/background.jpg) no-repeat; 
+	background:url(../images/background.jpg) repeat-y; 
 	background-size: 100%;
 }
 .botonPrueba{
@@ -6763,8 +6763,6 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .headerAcademia{
 	background:url(../images/header.jpg) no-repeat;
-	width: 416px;
-	height: 304px;
 }
 
 /*Agregados al final segun la pag http://miamicoder.com/2012/how-to-create-a-sencha-touch-2-app-part-2/*/

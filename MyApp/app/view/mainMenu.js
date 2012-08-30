@@ -26,19 +26,9 @@ extend: 'Ext.navigation.View',
         {
             id: 'launchscreen',
             cls: 'panelBackground',
-            scrollable: true,
             items:[
             {
-                xtype: 'panel',
-                items:{
-                    layout: 'hbox',
-                    items:
-                    [
-                        {flex:1},
-                        {html:'<div class="headerAcademia"></div>'},
-                        {flex:1}
-                    ]
-                }
+            	html:'<img src="./resources/images/header.jpg" widht=' +((wWidth/3)+10)+ ' height=' +(( wHeight/3)+10) + ' class="displayed"/>'
             },
             {
                     xtype: 'panel',

@@ -54,7 +54,7 @@ Ext.define("MyApp.view.Introduccion", {
 		                    items:
 		                    [
 		                        {flex:1},
-		                        {html:'<br /><iframe width="560" height="315" src="http://www.youtube.com/embed/0d8EDeTH9GU" frameborder="0" allowfullscreen></iframe>'},
+		                        {html:'<embed src="http://www.youtube.com/embed/0d8EDeTH9GU" width="'+(wWidth-50)+'" height="'+wHeight/4+'" /> '},
 		                        {flex:1}
 		                    ]
 		                }
