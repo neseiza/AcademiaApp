@@ -1,0 +1,40 @@
+{"responseData":
+	{
+		"feed":
+		{
+			"entries":
+			[
+			{
+				"nombre":"Pedro",
+				"edad":"22",
+				"ocupacion":"Estudiante",
+				"contentSnippet":"<b>Pedro<b>",
+				"content":"<b>Pedro</b><br>Es una estudiante",
+				"imagen":"resources/images/biografias/foto4.jpg",
+				"categories":[]
+			},
+
+			{
+				"nombre":"PAblo",
+				"edad":"22",
+				"ocupacion":"Estudiante",
+				"contentSnippet":"<b>PAblo<b>",
+				"content":"<b>PAblo</b><br><img src=\"resources/images/biografias/foto5.jpg\" alt=\"foto\"><br>Es fuerte",
+				"imagen":"resources/images/biografias/foto5.jpg",
+				"categories":[]
+			},
+			{
+				"nombre":"Paolo",
+				"edad":"22",
+				"ocupacion":"Estudiante",
+				"contentSnippet":"<b>Paolo<b>",
+				"content":"<b>Paolo</b><br>Es alguien",
+				"imagen":"resources/images/biografias/foto6.jpg",
+				"categories":[]
+			}
+			]
+		}
+	},
+"responseDetails": null, 
+"responseStatus": 200
+}

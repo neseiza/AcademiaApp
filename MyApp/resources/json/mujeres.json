@@ -1,0 +1,40 @@
+{"responseData":
+	{
+		"feed":
+		{
+			"entries":
+			[
+			{
+				"nombre":"Alicia",
+				"edad":"22",
+				"ocupacion":"Estudiante",
+				"contentSnippet":"<b>Alicia<b>",
+				"content":"<b>Alicia</b><br>Es una estudiante",
+				"imagen":"resources/images/biografias/foto1.jpg",
+				"categories":[]
+			},
+
+			{
+				"nombre":"Ana",
+				"edad":"22",
+				"ocupacion":"Estudiante",
+				"contentSnippet":"<b>Alicia<b>",
+				"content":"<b>Ana</b><br><img src=\"resources/images/biografias/foto2.jpg\" alt=\"foto\"><br>Es una enfermera",
+				"imagen":"resources/images/biografias/foto2.jpg",
+				"categories":[]
+			},
+			{
+				"nombre":"Paola",
+				"edad":"22",
+				"ocupacion":"Estudiante",
+				"contentSnippet":"<b>Alicia<b>",
+				"content":"<b>Paola</b><br>Es alguien",
+				"imagen":"resources/images/biografias/foto3.jpg",
+				"categories":[]
+			}
+			]
+		}
+	},
+"responseDetails": null, 
+"responseStatus": 200
+}
