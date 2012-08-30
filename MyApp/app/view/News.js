@@ -8,7 +8,7 @@ Ext.define('MyApp.view.News', {
 
         store: 'Contacts',
         itemTpl: [
-            '<div>{news}</div><div>{date}</div>',
+            '<div class="newsF">{news}</div><div class="dateF">{date}</div>',
         ].join(''),
         data: [
 	        { news: 'algo', date: '12-2-2' },
