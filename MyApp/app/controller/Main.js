@@ -14,7 +14,7 @@ Ext.define('MyApp.controller.Main', {
             galeria:'#galeriaMenu',
             galeriafotos:'#galeriafotos',
             galeriavideos:'#galeriavideos',
-            karaoke:'#karaoke'
+            karaoke:'#karaoke',
         },
 
         control: {
@@ -53,7 +53,7 @@ Ext.define('MyApp.controller.Main', {
             },
             karaoke:{
                 tap:'toKaraoke'
-            }
+            },
         }
     },
     toMusica: function() { 
@@ -63,6 +63,7 @@ Ext.define('MyApp.controller.Main', {
     toNoticias: function() {
 		var noticias = Ext.create('MyApp.view.Noticias');  
 		this.getMain().push(noticias);	
+		
     },
     toIntro: function() {
     	var intro = Ext.create('MyApp.view.Introduccion');
@@ -187,5 +188,5 @@ Ext.define('MyApp.controller.Main', {
     toKaraoke: function() {
         var karaoke = Ext.create('MyApp.view.Karaoke');
         this.getMain().push(karaoke);
-    }
+    },
 });

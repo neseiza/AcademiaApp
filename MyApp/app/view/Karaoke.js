@@ -52,8 +52,13 @@ Ext.define("MyApp.view.Karaoke", {
                 {
                     xtype:'button',
                     flex:'1',
-                    text:'Videos',
+                    text:'Play',
                     margin: 20,
+                    id:"playButton",
+                    handler: function() {
+	                	console.log('correcto');
+	                	startKaraoke();  
+                    },                    
                 }
             ],   
         }       
