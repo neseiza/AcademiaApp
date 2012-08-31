@@ -3,7 +3,7 @@ Ext.define("MyApp.view.Introduccion", {
 
     requires:
     [
-        'Ext.navigation.Bar'
+        'Ext.navigation.Bar',
     ],
 
     config: {
