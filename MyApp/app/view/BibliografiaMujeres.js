@@ -70,7 +70,7 @@ Ext.define("MyApp.view.BibliografiaMujeres", {
             /*
             listeners: {
                 itemtap: function(nestedList, list, index, element, post) {
-                    Ext.Msg.alert('Selected!', 'You selected ' + post.get('firstName'));
+                    Ext.Msg.alert('Selected!', '<s>You selected </s>' + post.get('firstName'));
                 }
             }
             */

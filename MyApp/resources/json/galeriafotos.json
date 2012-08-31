@@ -39,6 +39,42 @@
 				"tamano":"22k",
 				"path":"resources/images/galeriaFotos/foto6.jpg",
 				"categories":[]
+			},
+			{
+				"nombre":"Pedro",
+				"tamano":"22k",
+				"path":"resources/images/galeriaFotos/foto1.jpg",
+				"categories":[]
+			},
+			{
+				"nombre":"Pedro",
+				"tamano":"22k",
+				"path":"resources/images/galeriaFotos/foto2.jpg",
+				"categories":[]
+			},
+			{
+				"nombre":"Pedro",
+				"tamano":"22k",
+				"path":"resources/images/galeriaFotos/foto3.jpg",
+				"categories":[]
+			},
+			{
+				"nombre":"Pedro",
+				"tamano":"22k",
+				"path":"resources/images/galeriaFotos/foto4.jpg",
+				"categories":[]
+			},
+			{
+				"nombre":"Pedro",
+				"tamano":"22k",
+				"path":"resources/images/galeriaFotos/foto5.jpg",
+				"categories":[]
+			},
+			{
+				"nombre":"Pedro",
+				"tamano":"22k",
+				"path":"resources/images/galeriaFotos/foto6.jpg",
+				"categories":[]
 			}
 			]
 		}
