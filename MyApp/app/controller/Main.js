@@ -67,8 +67,8 @@ Ext.define('MyApp.controller.Main', {
     toIntro: function() {
     	var intro = Ext.create('MyApp.view.Introduccion');
 		this.getMain().push(intro);
-		  
-    },toMainMenu:function() {
+    },
+    toMainMenu:function() {
     	var menu = Ext.create('MyApp.view.mainMenu');
 	    this.getMain().push(menu);
     },
@@ -87,8 +87,7 @@ Ext.define('MyApp.controller.Main', {
     toGaleriaMenu: function() {
         var galeriamenu = Ext.create('MyApp.view.GaleriaMenu');
         this.getMain().push(galeriamenu);
-    },
-        this.getMain().push(noticias);  
+    },  
     toGaleriaFotos: function() {
         var galeriafotos = Ext.create('MyApp.view.GaleriaFotos');
         this.getMain().push(galeriafotos);
