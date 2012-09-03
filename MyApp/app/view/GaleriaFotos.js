@@ -47,7 +47,7 @@ Ext.define("MyApp.view.GaleriaFotos", {
             },
             listeners: {
                 itemtap : function(DataView, item, index, e, eObjs ) {  
-                    Ext.Msg.alert(e.get('nombre'), '<img src="'+e.get('path')+'" width="100%"> ' );
+                    Ext.Msg.alert(e.get('nombre'), '<img src="'+e.get('path')+'" width="'+(wWidth-50)+'" height="'+ wHeight/4 +'"> ' );
                 }
             },
         }       

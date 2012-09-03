@@ -6827,11 +6827,21 @@ right: 0.44em;
 .centeredO{
 	margin-left: auto;
 	margin-right: auto;
+	width: 100%;
+	height: auto;
 }
 img.displayed {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+img.displayedHeader {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height:auto;
 }
 .newsF{
 	position: relative;

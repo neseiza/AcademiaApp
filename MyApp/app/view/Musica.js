@@ -31,8 +31,6 @@ Ext.define("MyApp.view.Musica", {
 	        },
         	{
 	        	xtype: 'carousel',
-        		width: wWidth,
-        		height: (wHeight/3)+10,
         		cls:'centeredO',
 		        defaults: {
 			        styleHtmlContent: true

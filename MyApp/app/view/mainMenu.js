@@ -28,7 +28,8 @@ extend: 'Ext.navigation.View',
             cls: 'panelBackground',
             items:[
             {
-            	html:'<img src="./resources/images/header.jpg" widht=' +((wWidth/3)+10)+ ' height=' +(( wHeight/3)+10) + ' class="displayed"/>'
+            	//html:'<img src="./resources/images/header.jpg" widht=' +((wWidth/10)+50)+ ' height=' +(( wHeight/6)+50) + ' class="displayed"/>'
+            	html:'<img src="./resources/images/header.jpg" class="displayedHeader"/>'
             },
             {
                     xtype: 'panel',
@@ -95,6 +96,13 @@ extend: 'Ext.navigation.View',
                         },
                     ],
                     
+                },
+                {
+	            	xtype:'button',
+                    text:'Exit',
+                    handler: function() {
+	                	navigator.app.exitApp();  
+                    },                
                 }
             ]   
         }           
