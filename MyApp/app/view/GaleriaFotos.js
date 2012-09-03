@@ -1,18 +1,46 @@
 Ext.define("MyApp.view.GaleriaFotos", {
-           extend: "Ext.Panel",
+    extend: "Ext.Container",
     requires:
     [
         'Ext.navigation.Bar'
     ],
-    
-        items: 
+    config: {
+        layout: 
         {
-            extend: 'Ext.dataview.DataView',
+            type: 'card',
+            animation: 
+            {
+                type: 'slide',
+                direction: 'left',
+                duration: 250
+            }
+        },
+        items: 
+        [
+        {
+            xtype: 'dataview',
             fullscreen: true,
             cls: 'panelBackground',
+            items:
+            {
+                xtype: "titlebar",
+                id:"mainNavigationBar",
+                docked: "top",
+                title: "Galeria Videos",
+                items: 
+                [
+                {
+                    xtype: "button",
+                    align: 'left',
+                    text: "Regresar",
+                    ui: "back",
+                    id:"galeriaMenu"
+                }
+                ]
+            },
             store: {
                 autoLoad: true,
-                fields: ['nombre', 'path'],
+                fields: ['nombre', 'path','image'],
                 proxy: {
                     type: 'ajax',
                     url: "resources/json/galeriafotos.json",
@@ -28,30 +56,13 @@ Ext.define("MyApp.view.GaleriaFotos", {
                     '<div class="name">{nombre}</div>'
                 ].join(''),
             records: null,
-            items:
-            {
-                xtype: "titlebar",
-                id:"mainNavigationBar",
-                docked: "top",
-                title: "Galeria",
-                items: 
-                [
-                {
-                    xtype: "button",
-                    align: 'left',
-                    text: "Regresar",
-                    ui: "back",
-                    id:"galeriaMenu"
-                }
-                ]
-            },
             listeners: {
                 itemtap : function(DataView, item, index, e, eObjs ) {  
-                    Ext.Msg.alert(e.get('nombre'), '<img src="'+e.get('path')+'" width="'+(wWidth-50)+'" height="'+ wHeight/4 +'"> ' );
+                    Ext.Msg.alert(e.get('nombre'), '<embed src="'+e.get('path')+'" width="100%">' ); 
+                    //var musica = Ext.create('MyApp.view.BibliografiaHombres');  
                 }
-            },
-        }       
-     
+            }
+        }
+        ]
+    }
 });
-
-            
