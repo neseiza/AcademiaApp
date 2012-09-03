@@ -42,7 +42,7 @@
      */
     "css": [
         {
-            "path": "resources/css/app.css",
+            "path": "resources/css/application.css",
             "update": "delta"
         }
     ],

@@ -29,7 +29,7 @@ extend: 'Ext.navigation.View',
             items:[
             {
             	//html:'<img src="./resources/images/header.jpg" widht=' +((wWidth/10)+50)+ ' height=' +(( wHeight/6)+50) + ' class="displayed"/>'
-            	html:'<img src="./resources/images/header.jpg" class="displayedHeader"/>'
+            	html:'<img src="./resources/images/logo.gif" class="displayedHeader"/>'
             },
             {
                     xtype: 'panel',
@@ -39,6 +39,7 @@ extend: 'Ext.navigation.View',
                         {
                             xtype:'button',
                             id:'intro',
+                            cls:'buttonStyled',
                             flex:'1',
                             text:'Intronducci&oacute;n',
                             margin: 20,
@@ -47,6 +48,7 @@ extend: 'Ext.navigation.View',
                             xtype:'button',
                             flex:'1',
                             text:'Galer&iacute;a',
+                            cls:'buttonStyled',
                             id:'galeriaMenu',
                             margin: 20,
                         },
@@ -61,6 +63,7 @@ extend: 'Ext.navigation.View',
                         {
                             xtype:'button',
                             flex:'1',
+                            cls:'buttonStyled',
                             text:'Biograf&iacute;a',
                             id:'bibliografia',
                             margin: 20,
@@ -68,6 +71,7 @@ extend: 'Ext.navigation.View',
                         {
                             xtype:'button',
                             id:'musica',
+                            cls:'buttonStyled',
                             flex:'1',
                             text:'M&uacute;sica',
                             margin: 20,
@@ -83,6 +87,7 @@ extend: 'Ext.navigation.View',
                         {
                             xtype:'button',
                             id:'noticias',
+                            cls:'buttonStyled',
                             flex:'1',
                             text:'Noticias',
                             margin: 20,
@@ -90,6 +95,7 @@ extend: 'Ext.navigation.View',
                         {
                             xtype:'button',
                             flex:'1',
+                            cls:'buttonStyled',
                             text:'Karaoke',
                             id:'karaoke',
                             margin: 20,

@@ -1,0 +1,20 @@
+$base-color: #8b55ab;
+$include-highlights:false;
+
+$base-gradient: 'glossy';
+
+@import 'sencha-touch/default/all';
+@include sencha-button-ui('silver', #E8E9E9, 'glossy'); 
+@include sencha-panel;
+@include sencha-buttons;
+@include sencha-sheet;
+@include sencha-picker;
+@include sencha-toolbar-forms;
+@include sencha-tabs;
+@include sencha-toolbar;
+@include sencha-carousel;
+@include sencha-indexbar;
+@include sencha-list;
+@include sencha-layout;
+@include sencha-form;
+@include sencha-loading-spinner;

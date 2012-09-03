@@ -1,0 +1,61 @@
+.buttonStyled{
+	background: url(../images/optionbg.gif);
+	color:#FFFFFF;
+}
+.image{
+  background-color:#fff;
+  background-position:center;
+  background-repeat:no-repeat;
+  height:87px;
+  max-width:212px
+}
+.introText{
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.introText{
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.centered{
+	text-align:center;
+}
+.centeredO{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: auto;
+}
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.displayedHeader {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height:60%;
+}
+.newsF{
+	position: relative;
+	float: left;
+}
+.dateF{
+	position: relative;
+	float: right;
+}
+.panelBackground{
+	background:url(../images/bg.jpg) repeat; 
+}
+.botonPrueba{
+	background: #21c1fb;
+}
+.headerAcademia{
+	background:url(../images/logo.gif) no-repeat;
+}
+  
