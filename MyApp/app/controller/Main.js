@@ -63,7 +63,6 @@ Ext.define('MyApp.controller.Main', {
     toNoticias: function() {
 		var noticias = Ext.create('MyApp.view.Noticias');  
 		this.getMain().push(noticias);	
-		
     },
     toIntro: function() {
     	var intro = Ext.create('MyApp.view.Introduccion');
@@ -89,100 +88,13 @@ Ext.define('MyApp.controller.Main', {
         var galeriamenu = Ext.create('MyApp.view.GaleriaMenu');
         this.getMain().push(galeriamenu);
     },
+        this.getMain().push(noticias);  
     toGaleriaFotos: function() {
-        var galeriafotos = Ext.create('Ext.dataview.DataView', {
-            xtype: 'galeriafotos',
-            fullscreen: true,
-            cls: 'panelBackground',
-            store: {
-                autoLoad: true,
-                fields: ['nombre', 'path'],
-                proxy: {
-                    type: 'ajax',
-                    url: "resources/json/galeriafotos.json",
-                    reader: {
-                        type: 'json',
-                        rootProperty: 'responseData.feed.entries'
-                    }
-                }
-            },
-            baseCls: 'categories-list',
-                itemTpl: [
-                    '<div class="image" style="background-image:url({path})"></div>',
-                    '<div class="name">{nombre}</div>'
-                ].join(''),
-            records: null,
-            items:
-            {
-                xtype: "titlebar",
-                id:"mainNavigationBar",
-                docked: "top",
-                title: "Galeria Fotos",
-                items: 
-                [
-                {
-                    xtype: "button",
-                    align: 'left',
-                    text: "Regresar",
-                    ui: "back",
-                    id:"galeriaMenu"
-                }
-                ]
-            },
-            listeners: {
-                itemtap : function(DataView, item, index, e, eObjs ) {  
-                    Ext.Msg.alert(e.get('nombre'), '<img src="'+e.get('path')+'" width="100%"> ' );
-                }
-            },
-        });
+        var galeriafotos = Ext.create('MyApp.view.GaleriaFotos');
         this.getMain().push(galeriafotos);
     },
     toGaleriaVideos: function() {
-        var galeriavideos = Ext.create('Ext.dataview.DataView', {
-            xtype: 'galeriavideos',
-            fullscreen: true,
-            cls: 'panelBackground',
-            store: {
-                autoLoad: true,
-                fields: ['nombre', 'path','image'],
-                proxy: {
-                    type: 'ajax',
-                    url: "resources/json/galeriavideos.json",
-                    reader: {
-                        type: 'json',
-                        rootProperty: 'responseData.feed.entries'
-                    }
-                }
-            },
-            baseCls: 'categories-list',
-                itemTpl: [
-                    '<div class="image" style="background-image:url({image})"></div>',
-                    '<div class="name">{nombre}</div>'
-                ].join(''),
-            records: null,
-            items:
-            {
-                xtype: "titlebar",
-                id:"mainNavigationBar",
-                docked: "top",
-                title: "Galeria Videos",
-                items: 
-                [
-                {
-                    xtype: "button",
-                    align: 'left',
-                    text: "Regresar",
-                    ui: "back",
-                    id:"galeriaMenu"
-                }
-                ]
-            },
-            listeners: {
-                itemtap : function(DataView, item, index, e, eObjs ) {  
-                    Ext.Msg.alert(e.get('nombre'), '<embed src="'+e.get('path')+'" width="100%">' ); 
-                }
-            },
-        });
+        var galeriavideos = Ext.create('MyApp.view.GaleriaVideos');
         this.getMain().push(galeriavideos);
     },
     toKaraoke: function() {
