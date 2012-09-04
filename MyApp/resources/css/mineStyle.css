@@ -39,7 +39,7 @@ img.displayedHeader {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    height:60%;
+    height:40%;
 }
 .newsF{
 	position: relative;
@@ -57,5 +57,9 @@ img.displayedHeader {
 }
 .headerAcademia{
 	background:url(../images/logo.gif) no-repeat;
+}
+.mBColor{
+	color:#FFFFFF;
+	text-align: center;
 }
   

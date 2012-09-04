@@ -10,6 +10,7 @@ extend: 'Ext.navigation.View',
     
     config: 
     {
+    	cls:'panelBackground',
 	    navigationBar:false,
         layout: 
         {
@@ -24,8 +25,8 @@ extend: 'Ext.navigation.View',
 
         items:
         {
-            id: 'launchscreen',
             cls: 'panelBackground',
+            id: 'launchscreen',
             items:[
             {
             	//html:'<img src="./resources/images/header.jpg" widht=' +((wWidth/10)+50)+ ' height=' +(( wHeight/6)+50) + ' class="displayed"/>'
@@ -39,7 +40,7 @@ extend: 'Ext.navigation.View',
                         {
                             xtype:'button',
                             id:'intro',
-                            cls:'buttonStyled',
+                            ui:'silver',
                             flex:'1',
                             text:'Intronducci&oacute;n',
                             margin: 20,
@@ -48,7 +49,7 @@ extend: 'Ext.navigation.View',
                             xtype:'button',
                             flex:'1',
                             text:'Galer&iacute;a',
-                            cls:'buttonStyled',
+                            ui:'silver',
                             id:'galeriaMenu',
                             margin: 20,
                         },
@@ -63,7 +64,7 @@ extend: 'Ext.navigation.View',
                         {
                             xtype:'button',
                             flex:'1',
-                            cls:'buttonStyled',
+                            ui:'silver',
                             text:'Biograf&iacute;a',
                             id:'bibliografia',
                             margin: 20,
@@ -71,7 +72,7 @@ extend: 'Ext.navigation.View',
                         {
                             xtype:'button',
                             id:'musica',
-                            cls:'buttonStyled',
+                            ui:'silver',
                             flex:'1',
                             text:'M&uacute;sica',
                             margin: 20,
@@ -87,7 +88,7 @@ extend: 'Ext.navigation.View',
                         {
                             xtype:'button',
                             id:'noticias',
-                            cls:'buttonStyled',
+                            ui:'silver',
                             flex:'1',
                             text:'Noticias',
                             margin: 20,
@@ -95,7 +96,7 @@ extend: 'Ext.navigation.View',
                         {
                             xtype:'button',
                             flex:'1',
-                            cls:'buttonStyled',
+                            ui:'silver',
                             text:'Karaoke',
                             id:'karaoke',
                             margin: 20,
