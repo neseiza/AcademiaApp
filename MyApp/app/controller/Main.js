@@ -62,7 +62,12 @@ Ext.define('MyApp.controller.Main', {
     },
     toNoticias: function() {
 		var noticias = Ext.create('MyApp.view.Noticias');  
-		this.getMain().push(noticias);	
+		if(activeConnection()){
+	    	this.getMain().push(noticias);    
+        }
+        else{
+	        this.getMain().push(Ext.Msg.alert('Network status', 'Para poder ver esta secci&oacute;n se requiere acceso a internet.', Ext.emptyFn));
+        }
     },
     toIntro: function() {
     	var intro = Ext.create('MyApp.view.Introduccion');
@@ -74,7 +79,12 @@ Ext.define('MyApp.controller.Main', {
     },
     toBibliografia: function() {
         var bibliografia = Ext.create('MyApp.view.BibliografiaMenu');
-        this.getMain().push(bibliografia);
+        if(activeConnection()){
+	    	this.getMain().push(bibliografia);    
+        }
+        else{
+	        this.getMain().push(Ext.Msg.alert('Network status', 'Para poder ver esta secci&oacute;n se requiere acceso a internet.', Ext.emptyFn));
+        }
     },
     toBibliografiaHombres: function() {
         var bibliografiahombres = Ext.create('MyApp.view.BibliografiaHombres');
