@@ -26,7 +26,7 @@ Ext.define("MyApp.view.Karaoke", {
             xtype: "titlebar",
             id:"mainNavigationBar",
             docked: "top",
-            title: "Karaokesss",
+            title: "Karaoke",
             items: 
             [
             {
