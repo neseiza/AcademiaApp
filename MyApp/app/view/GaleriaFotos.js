@@ -58,7 +58,7 @@ Ext.define("MyApp.view.GaleriaFotos", {
             records: null,
             listeners: {
                 itemtap : function(DataView, item, index, e, eObjs ) {  
-                    Ext.Msg.alert(e.get('nombre'), '<embed src="'+e.get('path')+'" width="100%">' ); 
+                    Ext.Msg.alert(e.get('nombre'), '<img src="'+e.get('path')+'" class="galery">' ); 
                     //var musica = Ext.create('MyApp.view.BibliografiaHombres');  
                 }
             }
