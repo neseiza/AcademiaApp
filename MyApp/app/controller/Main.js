@@ -61,7 +61,7 @@ Ext.define('MyApp.controller.Main', {
 		this.getMain().push(musica);
     },
     toNoticias: function() {
-		var noticias = Ext.create('MyApp.view.Noticias');  
+		var noticias = Ext.create('MyApp.view.News');  
 		this.getMain().push(noticias);	
     },
     toIntro: function() {

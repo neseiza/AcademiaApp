@@ -1,0 +1,1 @@
+var noticiasJson = 'http://localhost:9080/wapportal/generateFeed?feed=clubacademia_noticias&format=json&width=300';
