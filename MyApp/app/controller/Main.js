@@ -78,10 +78,11 @@ Ext.define('MyApp.controller.Main', {
 		this.getMain().push(musica);
     },
     toNoticias: function() {
+
 		var noticias = Ext.create('MyApp.view.News');  
 		if(activeConnection()){
 	    	this.getMain().push(noticias);    
-        }
+	    }
         else{
 	        this.getMain().push(Ext.Msg.alert('Network status', 'Para poder ver esta secci&oacute;n se requiere acceso a internet.', Ext.emptyFn));
         }
@@ -97,12 +98,12 @@ Ext.define('MyApp.controller.Main', {
     //Quitar comentarios para device
     toBibliografia: function() {
         var bibliografia = Ext.create('MyApp.view.BibliografiaMenu');
-        //if(activeConnection()){
+        if(activeConnection()){
 	    	this.getMain().push(bibliografia);    
-        //}
-        //else{
-	    //    this.getMain().push(Ext.Msg.alert('Network status', 'Para poder ver esta secci&oacute;n se requiere acceso a internet.', Ext.emptyFn));
-        //}
+        }
+        else{
+	        this.getMain().push(Ext.Msg.alert('Network status', 'Para poder ver esta secci&oacute;n se requiere acceso a internet.', Ext.emptyFn));
+        }
     },
     toBibliografiaHombres: function() {
         var bibliografiahombres = Ext.create('MyApp.view.BibliografiaHombres');
