@@ -62,12 +62,12 @@ Ext.define('MyApp.controller.Main', {
     },
     toNoticias: function() {
 		var noticias = Ext.create('MyApp.view.Noticias');  
-		if(activeConnection()){
+		//if(activeConnection()){
 	    	this.getMain().push(noticias);    
-        }
+        /*}
         else{
 	        this.getMain().push(Ext.Msg.alert('Network status', 'Para poder ver esta secci&oacute;n se requiere acceso a internet.', Ext.emptyFn));
-        }
+        }*/
     },
     toIntro: function() {
     	var intro = Ext.create('MyApp.view.Introduccion');
