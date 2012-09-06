@@ -8,8 +8,6 @@ Ext.define("MyApp.view.BibliografiaHombres", {
     ],
 
     config: {
-
-        
         layout: 
         {
             type: 'card',
