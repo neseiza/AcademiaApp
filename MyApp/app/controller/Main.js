@@ -4,6 +4,9 @@ Ext.define('MyApp.controller.Main', {
     config: {
         refs: {
             main: 'mainview',
+            bibliografiah: 'bibliografiah',
+            bibliografiam: 'bibliografiam',
+            bioshow:'bio-show',
             intro: '#intro',
             back: '#back',
             noticias : '#noticias',
@@ -51,6 +54,12 @@ Ext.define('MyApp.controller.Main', {
             bibliografiamujeres:{
                 tap:'toBibliografiaMujeres'
             },
+            bibliografiah: {
+                itemtap: 'onBioSelect'
+            },
+            bibliografiam: {
+                itemtap: 'onBioSelect'
+            },
             karaoke:{
                 tap:'toKaraoke'
             },
@@ -61,8 +70,15 @@ Ext.define('MyApp.controller.Main', {
 		this.getMain().push(musica);
     },
     toNoticias: function() {
-		var noticias = Ext.create('MyApp.view.News');  
-		this.getMain().push(noticias);	
+
+		var noticias = Ext.create('MyApp.view.Noticias');  
+		if(activeConnection()){
+	    	this.getMain().push(noticias);    
+        }
+        else{
+	        this.getMain().push(Ext.Msg.alert('Network status', 'Para poder ver esta secci&oacute;n se requiere acceso a internet.', Ext.emptyFn));
+        }
+
     },
     toIntro: function() {
     	var intro = Ext.create('MyApp.view.Introduccion');
@@ -72,9 +88,15 @@ Ext.define('MyApp.controller.Main', {
     	var menu = Ext.create('MyApp.view.mainMenu');
 	    this.getMain().push(menu);
     },
+    //Quitar comentarios para device
     toBibliografia: function() {
         var bibliografia = Ext.create('MyApp.view.BibliografiaMenu');
-        this.getMain().push(bibliografia);
+        //if(activeConnection()){
+	    	this.getMain().push(bibliografia);    
+        //}
+        //else{
+	    //    this.getMain().push(Ext.Msg.alert('Network status', 'Para poder ver esta secci&oacute;n se requiere acceso a internet.', Ext.emptyFn));
+        //}
     },
     toBibliografiaHombres: function() {
         var bibliografiahombres = Ext.create('MyApp.view.BibliografiaHombres');
@@ -84,6 +106,19 @@ Ext.define('MyApp.controller.Main', {
         var bibliografiamujeres = Ext.create('MyApp.view.BibliografiaMujeres');
         this.getMain().push(bibliografiamujeres);
     },
+
+    onBioSelect: function(list, index, node, record) {
+        if (!this.bioshow) {
+            this.bioshow = Ext.create('MyApp.view.bio.Show');
+        }
+
+        // Bind the record onto the show contact view
+        this.bioshow.setRecord(record);
+
+        // Push the show contact view into the navigation view
+        this.getMain().push(this.bioshow);
+    },
+
     toGaleriaMenu: function() {
         var galeriamenu = Ext.create('MyApp.view.GaleriaMenu');
         this.getMain().push(galeriamenu);
@@ -100,4 +135,6 @@ Ext.define('MyApp.controller.Main', {
         var karaoke = Ext.create('MyApp.view.Karaoke');
         this.getMain().push(karaoke);
     },
+
+
 });
