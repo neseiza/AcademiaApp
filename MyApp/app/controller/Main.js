@@ -4,6 +4,9 @@ Ext.define('MyApp.controller.Main', {
     config: {
         refs: {
             main: 'mainview',
+            bibliografiah: 'bibliografiah',
+            bibliografiam: 'bibliografiam',
+            bioshow:'bio-show',
             intro: '#intro',
             back: '#back',
             noticias : '#noticias',
@@ -51,6 +54,12 @@ Ext.define('MyApp.controller.Main', {
             bibliografiamujeres:{
                 tap:'toBibliografiaMujeres'
             },
+            bibliografiah: {
+                itemtap: 'onBioSelect'
+            },
+            bibliografiam: {
+                itemtap: 'onBioSelect'
+            },
             karaoke:{
                 tap:'toKaraoke'
             },
@@ -95,6 +104,19 @@ Ext.define('MyApp.controller.Main', {
         var bibliografiamujeres = Ext.create('MyApp.view.BibliografiaMujeres');
         this.getMain().push(bibliografiamujeres);
     },
+
+    onBioSelect: function(list, index, node, record) {
+        if (!this.bioshow) {
+            this.bioshow = Ext.create('MyApp.view.bio.Show');
+        }
+
+        // Bind the record onto the show contact view
+        this.bioshow.setRecord(record);
+
+        // Push the show contact view into the navigation view
+        this.getMain().push(this.bioshow);
+    },
+
     toGaleriaMenu: function() {
         var galeriamenu = Ext.create('MyApp.view.GaleriaMenu');
         this.getMain().push(galeriamenu);
