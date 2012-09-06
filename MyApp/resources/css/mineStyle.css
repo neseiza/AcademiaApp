@@ -126,3 +126,7 @@ img.galery {
     height:auto;
     max-width:300px;
 }
+td.biblio{
+  color:white;
+  vertical-align:top;
+}

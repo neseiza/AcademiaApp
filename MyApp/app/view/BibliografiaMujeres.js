@@ -1,5 +1,6 @@
 Ext.define("MyApp.view.BibliografiaMujeres", {
     extend: "Ext.Container",
+    xtype: "bibliografiamujeres",
     requires:
     [
         'Ext.navigation.Bar'
@@ -18,68 +19,72 @@ Ext.define("MyApp.view.BibliografiaMujeres", {
         items: 
         [
         {
-            xtype: 'nestedlist',
-            title: 'Concursantes Mujeres',
-            toolbar: {
-            componentCls: 'x-toolbar-dark',
-            items: 
-            [
+            xtype: 'dataview',
+            fullscreen: true,
+            cls: 'panelBackground',
+            items:
             {
-                id: "bibliografia",
-                xtype: "button",
-                align: 'left',
-                text: "Regresar",
-                ui: "back"
-            }
-            ]
-        },
-            //displayField: 'nombre',
+                xtype: "titlebar",
+                id:"mainNavigationBar",
+                docked: "top",
+                title: "Biografía Mujeres",
+                items: 
+                [
+                {
+                    xtype: "button",
+                    align: 'left',
+                    text: "Regresar",
+                    ui: "back",
+                    id:"bibliografia"
+                }
+                ]
+            },
             store: {
-                type: 'tree',
-                fields: [
-                        'nombre', 'edad', 'ocupacion', 'contentSnippet', 'imagen','content',
-                        {name: 'leaf', defaultValue: true}
-                    ],
-                root: {
-                    leaf: false
-                },
+                autoLoad: true,
+                fields: ['id','name','age','birthplace','status','gendre','bio'],
                 proxy: {
                     type: 'ajax',
-                    url: "resources/json/mujeres.json",
+                    url: "resources/json/alumnos.json",
                     reader: {
                         type: 'json',
-                        rootProperty: 'responseData.feed.entries'
+                        rootProperty: 'items'
                     }
-                }
+                },
+                filters: 
+                {
+                property: 'gendre',
+                value   : 'm'
+                },
             },
-            detailCard: {
-                xtype: 'panel',
-                scrollable: true,
-                styleHtmlContent: true,
-                cls: 'panelBackground',
-            },
-            //Mostrar el contenido en html
-            getItemTextTpl: function(recordnode) {
-                return template =   
-                    '<table border="0">'+
+            
+    
+            baseCls: 'categories-list',
+                itemTpl: [
+                    '<table border="1">'+
                     '<tr>'+
-                    '<td><img src=\"{imagen}\"alt=\"foto\" width=\"100px\""> </td>'+
-                    '<td><h1><b>{nombre}</b></h1><br><b>Edad: </b>{edad}<br><b>Ocupacion: </b>{ocupacion}</td>'+
+                        '<td><img src=\"http://fwd.mx/wapportal/sites/academia/images/{id}.jpg\"alt=\"foto\" width=\"120px\""> </td>'+
+                        '<td align="left" class="biblio"><b>{name}</b><br>'+
+                            '<b>Edad:</b> {age}<br>'+
+                            '<b>Lugar:</b> {birthplace}<br>'+
+                            '<b>Estatus:</b> {status}'+
                     '</table>'
-            }, 
-            /*
+                ].join(''),
+            records: null,
             listeners: {
-                itemtap: function(nestedList, list, index, element, post) {
-                    Ext.Msg.alert('Selected!', '<s>You selected </s>' + post.get('firstName'));
+                itemtap : function temporal(DataView, item, index, e, eObjs ) {  
+                    Ext.Msg.alert(e.get('nombre'), '<div align="justify">'+e.get('bio')+"</div>" );
+                    var test = "hola"; 
+                    Ext.dispatch({
+                        controller: 'MyApp.controller.Main',
+                        action: 'toTest',
+                        test: 'hola',
+                    });
                 }
             }
-            */
-            listeners: {
-                itemtap: function(nestedList, list, index, element, post) {
-                    this.getDetailCard().setHtml(post.get('content'));
-                }
-            }
-        }       
+        }
         ]
     }
 });
+
+
+

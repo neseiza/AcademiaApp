@@ -18,31 +18,29 @@ Ext.define("MyApp.view.BibliografiaHombres", {
         items: 
         [
         {
-            xtype: 'nestedlist',
-            title: 'Concursantes Hombres',
-            toolbar: {
-            componentCls: 'x-toolbar-dark',
-            items: 
-            [
+            xtype: 'dataview',
+            fullscreen: true,
+            cls: 'panelBackground',
+            items:
             {
-                id: "bibliografia",
-                xtype: "button",
-                align: 'left',
-                text: "Regresar",
-                ui: "back"
-            }
-            ]
-        },
-            //displayField: 'nombre',
+                xtype: "titlebar",
+                id:"mainNavigationBar",
+                docked: "top",
+                title: "Bibliografía Hombres",
+                items: 
+                [
+                {
+                    xtype: "button",
+                    align: 'left',
+                    text: "Regresar",
+                    ui: "back",
+                    id:"bibliografia"
+                }
+                ]
+            },
             store: {
-                type: 'tree',
-                fields: [
-                        'id','name','age','birthplace','status','gendre','bio',
-                        {name: 'leaf', defaultValue: true}
-                    ],
-                root: {
-                    leaf: false
-                },
+                autoLoad: true,
+                fields: ['id','name','age','birthplace','status','gendre','bio'],
                 proxy: {
                     type: 'ajax',
                     url: "resources/json/alumnos.json",
@@ -50,50 +48,53 @@ Ext.define("MyApp.view.BibliografiaHombres", {
                         type: 'json',
                         rootProperty: 'items'
                     }
-                }
+                },
+                filters: 
+                {
+                property: 'gendre',
+                value   : 'h'
+                },
             },
-            detailCard: {
-                xtype: 'panel',
-                scrollable: true,
-                styleHtmlContent: true,
-                cls: 'panelBackground',
-            },
-            //Mostrar el contenido en html
-            getItemTextTpl: function(recordnode) {
-                return template = 
-                    '<table border="0">'+
+            
+    
+            baseCls: 'categories-list',
+                itemTpl: [
+                    '<table border="1">'+
                     '<tr>'+
-                    '<td><img src=\"http://fwd.mx/wapportal/sites/academia/images/{id}.jpg\"alt=\"foto\" width=\"100px\""> </td>'+
-                    '<td><h1><b>{name}</b></h1><br><b>Edad:</b> {age}<br><b>Estatus:</b> {status}'+
+                        '<td><img src=\"http://fwd.mx/wapportal/sites/academia/images/{id}.jpg\"alt=\"foto\" width=\"120px\""> </td>'+
+                        '<td align="left" class="biblio"><b>{name}</b><br>'+
+                            '<b>Edad:</b> {age}<br>'+
+                            '<b>Lugar:</b> {birthplace}<br>'+
+                            '<b>Estatus:</b> {status}'+
                     '</table>'
-            },
-
-
-
-            /*
-
-            getItemTextTpl: function(recordnode) {
-                var itemTpl = new Ext.XTemplate('<tpl for = ".">',
-                '<div>{gendre}</div>',
-                '<tpl if="gendre==m">',   // Or '<tpl if="active==\'true\'">',
-                     '<div class= "subSectionToggleButton">Active</div>', 
-                '</tpl>',   
-                '</tpl>');
-                return itemTpl
-            }, 
-
+                ].join(''),
+            records: null,
             listeners: {
-                itemtap: function(nestedList, list, index, element, post) {
-                    Ext.Msg.alert('Selected!', 'You selected ' + post.get('firstName'));
+                itemtap : function(DataView, item, index, e, eObjs ) {  
+                    Ext.Msg.alert(e.get('name'), '<div align="justify">'+e.get('bio')+"</div>" );      
                 }
-            }
-            */
-            listeners: {
-                itemtap: function(nestedList, list, index, element, post) {
-                    this.getDetailCard().setHtml(post.get('content'));
+                /*
+                getItemTextTpl: function(recordnode) {
+                    var itemTpl = new Ext.XTemplate('<tpl for = ".">',
+                    ,
+                    '<tpl if="gendre==m">',   // Or '<tpl if="active==\'true\'">',
+                         '<div class= "subSectionToggleButton">Active</div>', 
+                    '</tpl>',   
+                    '</tpl>');
+                    return itemTpl = '<div>{gendre}</div>'
+                }, 
+
+                listeners: {
+                    itemtap: function(nestedList, list, index, element, post) {
+                        Ext.Msg.alert('Selected!', 'You selected ' + post.get('firstName'));
+                    }
                 }
+                */
             }
-        }       
+        }
         ]
     }
 });
+
+
+
