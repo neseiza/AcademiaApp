@@ -78,14 +78,13 @@ Ext.define('MyApp.controller.Main', {
 		this.getMain().push(musica);
     },
     toNoticias: function() {
-		var noticias = Ext.create('MyApp.view.Noticias');  
+		var noticias = Ext.create('MyApp.view.News');  
 		if(activeConnection()){
 	    	this.getMain().push(noticias);    
         }
         else{
 	        this.getMain().push(Ext.Msg.alert('Network status', 'Para poder ver esta secci&oacute;n se requiere acceso a internet.', Ext.emptyFn));
         }
-
     },
     toIntro: function() {
     	var intro = Ext.create('MyApp.view.Introduccion');
