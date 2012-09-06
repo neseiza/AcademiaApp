@@ -4,7 +4,6 @@ Ext.define('MyApp.controller.Main', {
     config: {
         refs: {
             main: 'mainview',
-            test: 'bibliografiamujeres',
             intro: '#intro',
             back: '#back',
             noticias : '#noticias',
@@ -111,61 +110,6 @@ Ext.define('MyApp.controller.Main', {
     toKaraoke: function() {
         var karaoke = Ext.create('MyApp.view.Karaoke');
         this.getMain().push(karaoke);
-    },
-
-    //Eliminar tras terminar pruebas
-    /*Test de paso de valores a vista desde un datastore con un json
-    */
-    toTest: function(options) {
-        //var test = options.test;
-        var galeriafotos = Ext.create('Ext.Container',{
-            xtype:'container',
-            fullscreen: true,
-            cls: 'panelBackground',
-            scrollable:true,
-            items: 
-            [
-            {
-                xtype: "titlebar",
-                id:"mainNavigationBar",
-                docked: "top",
-                //title: title2,
-                items: 
-                [
-                {
-                    xtype: "button",
-                    id:'back',
-                    align: 'left',
-                    text: "Regresar",
-                    ui: "back",
-                }
-                ]
-            },
-            {
-                items:[
-                    {
-                        xtype: 'panel',
-                        items:{
-                            layout: 'hbox',
-                            items:
-                            [
-                                {flex:1},
-                                //{html:'Esto es solo un test'},
-                                {html: '<p>' + test.test + '</p>'},
-                                {flex:1}
-                            ]
-                        }
-                    },
-                    {
-                        xtype: 'panel',
-                        html:'Esto es test',
-                        cls:'introText',
-                    }
-                ],   
-            }       
-            ]
-        });
-        this.getMain().push(galeriafotos);
     },
 
 

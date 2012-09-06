@@ -1,11 +1,15 @@
 Ext.define("MyApp.view.BibliografiaMujeres", {
     extend: "Ext.Container",
-    xtype: "bibliografiamujeres",
+
     requires:
     [
-        'Ext.navigation.Bar'
+        'Ext.navigation.Bar',
+        'MyApp.view.BibliografiaM'
     ],
+
     config: {
+
+        
         layout: 
         {
             type: 'card',
@@ -16,75 +20,60 @@ Ext.define("MyApp.view.BibliografiaMujeres", {
                 duration: 250
             }
         },
+
         items: 
         [
         {
-            xtype: 'dataview',
-            fullscreen: true,
-            cls: 'panelBackground',
-            items:
+            xtype: "titlebar",
+            id:"mainNavigationBar",
+            docked: "top",
+            title: "Bibliografias de mujeres",
+            items: 
+            [
             {
-                xtype: "titlebar",
-                id:"mainNavigationBar",
-                docked: "top",
-                title: "Biografía Mujeres",
-                items: 
-                [
-                {
-                    xtype: "button",
-                    align: 'left',
-                    text: "Regresar",
-                    ui: "back",
-                    id:"bibliografia"
-                }
-                ]
-            },
-            store: {
-                autoLoad: true,
-                fields: ['id','name','age','birthplace','status','gendre','bio'],
-                proxy: {
-                    type: 'ajax',
-                    url: "resources/json/alumnos.json",
-                    reader: {
-                        type: 'json',
-                        rootProperty: 'items'
-                    }
-                },
-                filters: 
-                {
-                property: 'gendre',
-                value   : 'm'
-                },
-            },
-            
-    
-            baseCls: 'categories-list',
-                itemTpl: [
-                    '<table border="1">'+
-                    '<tr>'+
-                        '<td><img src=\"http://fwd.mx/wapportal/sites/academia/images/{id}.jpg\"alt=\"foto\" width=\"120px\""> </td>'+
-                        '<td align="left" class="biblio"><b>{name}</b><br>'+
-                            '<b>Edad:</b> {age}<br>'+
-                            '<b>Lugar:</b> {birthplace}<br>'+
-                            '<b>Estatus:</b> {status}'+
-                    '</table>'
-                ].join(''),
-            records: null,
-            listeners: {
-                itemtap : function temporal(DataView, item, index, e, eObjs ) {  
-                    Ext.Msg.alert(e.get('nombre'), '<div align="justify">'+e.get('bio')+"</div>" );
-                    var test = "hola"; 
-                    Ext.dispatch({
-                        controller: 'MyApp.controller.Main',
-                        action: 'toTest',
-                        test: 'hola',
-                    });
-                }
+                xtype: "button",
+                align: 'left',
+                text: "Regresar",
+                ui: "back",
+                id:"bibliografia"
             }
-        }
+            ]
+        },
+        {
+            xtype:'bibliografiam'      
+        }       
         ]
     }
 });
 
+            /*
+               getItemTextTpl: function(recordnode) {
+                return template =   
+                    '<table border="0">'+
+                    '<tr>'+
+                    '<td><img src=\"{imagen}\"alt=\"foto\" width=\"100px\""> </td>'+
+                    '<td><h1><b>{nombre}</b></h1><br><b>Edad: </b>{edad}<br><b>Ocupacion: </b>{ocupacion}</td>'+
+                    '</table>'
+            }, 
+            
+            //Dentro del nested list
+            detailCard: {
+                xtype: 'panel',
+                scrollable: true,
+                styleHtmlContent: true,
+                cls: 'panelBackground',
+            },
 
 
+            listeners: {
+                itemtap: function(nestedList, list, index, element, post) {
+                    Ext.Msg.alert('Selected!', '<s>You selected </s>' + post.get('firstName'));
+                }
+            }
+            
+            listeners: {
+                itemtap: function(nestedList, list, index, element, post) {
+                    this.getDetailCard().setHtml(post.get('content'));
+                }
+            }
+            */

@@ -15,6 +15,10 @@ Ext.application({
 
     controllers: ['Main'],
     
+    models: ['Bibliografia'],
+    
+    stores: ['BibliografiaH','BibliografiaM'],
+    
     icon: {
         57: 'resources/icons/Icon.png',
         72: 'resources/icons/Icon~ipad.png',
