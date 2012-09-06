@@ -11,9 +11,13 @@ Ext.application({
         'Ext.MessageBox'
     ],
 
-    views: ['BibliografiaMujeres','BibliografiaHombres','Musica','mainMenu','GaleriaFotos','GaleriaVideos','BibliografiaMenu','GaleriaMenu','Introduccion','Noticias','Karaoke'],
+    views: ['BibliografiaMujeres','BibliografiaHombres','Musica','mainMenu','GaleriaFotos','GaleriaVideos','BibliografiaMenu','GaleriaMenu','Introduccion','News','Karaoke'],
 
     controllers: ['Main'],
+    
+    models: ['Bibliografia'],
+    
+    stores: ['BibliografiaH','BibliografiaM'],
     
     icon: {
         57: 'resources/icons/Icon.png',
