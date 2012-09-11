@@ -43,9 +43,11 @@ Ext.define("MyApp.view.GaleriaFotos", {
                 fields: ['nombre', 'path','image'],
                 proxy: {
                     type: 'ajax',
+                    //Cambiar por el feed de produccion
                     url: "resources/json/galeriafotos.json",
                     reader: {
                         type: 'json',
+                        //Cambiar root dependiendo el feed
                         rootProperty: 'responseData.feed.entries'
                     }
                 }

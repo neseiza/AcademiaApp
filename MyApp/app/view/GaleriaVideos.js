@@ -40,26 +40,26 @@ Ext.define("MyApp.view.GaleriaVideos", {
             },
             store: {
                 autoLoad: true,
-                fields: ['nombre', 'path','image'],
+                fields: ['id', 'title','image','description'],
                 proxy: {
                     type: 'ajax',
+                    //Obtener el feed mediante direccion web
                     url: "resources/json/galeriavideos.json",
                     reader: {
                         type: 'json',
-                        rootProperty: 'responseData.feed.entries'
+                        rootProperty: 'items'
                     }
                 }
             },
             baseCls: 'categories-list',
                 itemTpl: [
                     '<div class="image" style="background-image:url({image})"></div>',
-                    '<div class="name">{nombre}</div>'
+                    '<div class="name">{title}</div>'
                 ].join(''),
             records: null,
             listeners: {
-                itemtap : function(DataView, item, index, e, eObjs ) {  
-                    Ext.Msg.alert(e.get('nombre'), '<embed src="'+e.get('path')+'" width="100%">' ); 
-                    //var musica = Ext.create('MyApp.view.BibliografiaHombres');  
+                itemtap : function(DataView, item, index, e, eObjs ) { 
+                    Ext.Msg.alert(e.get('description'), '<embed src="localhost:9080/wapportal/util?action=video&feed_id=clubacademia_videos&item_id='+e.get('id')+'" width="100%">' );   
                 }
             }
         }

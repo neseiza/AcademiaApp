@@ -116,27 +116,21 @@ Ext.define('MyApp.controller.Main', {
 
     onBioSelectM: function(list, index, node, record) {
         this.bioshow = Ext.create('MyApp.view.bio.ShowM');
-        // Bind the record onto the show contact view
         this.bioshow.setRecord(record);
-        // Push the show contact view into the navigation view
         this.getMain().push(this.bioshow);
     },
     onBioSelectH: function(list, index, node, record) {
         this.bioshow = Ext.create('MyApp.view.bio.ShowH');
-        // Bind the record onto the show contact view
         this.bioshow.setRecord(record);
-        // Push the show contact view into the navigation view
         this.getMain().push(this.bioshow);
     },
 
     ToBackShowM: function() {
         bioshow = Ext.create('MyApp.view.BibliografiaMujeres');
-        // Push the show contact view into the navigation view
         this.getMain().push(bioshow);
     },
     ToBackShowH: function() {
         bioshow = Ext.create('MyApp.view.BibliografiaHombres');
-        // Push the show contact view into the navigation view
         this.getMain().push(bioshow);
     },
 
@@ -156,6 +150,5 @@ Ext.define('MyApp.controller.Main', {
         var karaoke = Ext.create('MyApp.view.Karaoke');
         this.getMain().push(karaoke);
     },
-
 
 });

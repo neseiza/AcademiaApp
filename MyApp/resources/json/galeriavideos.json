@@ -1,47 +1,58 @@
-{"responseData":
-	{
-		"feed":
-		{
-			"entries":
-			[
-			{
-				"nombre":"Pedro",
-				"tamano":"22k",
-				"path":"http://www.youtube.com/embed/rQJ2iy9Qzig",
-				"image":"http://i3.ytimg.com/vi/rd7V6A2bIIw/default.jpg",
-				"categories":[]
-			},
-			{
-				"nombre":"Pedro",
-				"tamano":"22k",
-				"path":"http://www.youtube.com/embed/rQJ2iy9Qzig",
-				"image":"http://i3.ytimg.com/vi/rd7V6A2bIIw/default.jpg",
-				"categories":[]
-			},
-			{
-				"nombre":"Pedro",
-				"tamano":"22k",
-				"path":"http://www.youtube.com/embed/rQJ2iy9Qzig",
-				"image":"http://i3.ytimg.com/vi/rd7V6A2bIIw/default.jpg",
-				"categories":[]
-			},
-			{
-				"nombre":"Pedro",
-				"tamano":"22k",
-				"path":"http://www.youtube.com/embed/rQJ2iy9Qzig",
-				"image":"http://i3.ytimg.com/vi/rd7V6A2bIIw/default.jpg",
-				"categories":[]
-			},
-			{
-				"nombre":"Pedro",
-				"tamano":"22k",
-				"path":"http://www.youtube.com/embed/rQJ2iy9Qzig",
-				"image":"http://i3.ytimg.com/vi/rd7V6A2bIIw/default.jpg",
-				"categories":[]
-			}
-			]
-		}
+{
+	"pubDate": "2012.09.06",
+    "title": "Club Academia Videos",
+    "items": [
+    {
+		"id":1,
+		"title":"Pedro",
+		"author":"admin",
+		"description":"Video 1",
+		"pubDate": "2012-09-06 13:34:00.0",
+		"image":"http://t2.gstatic.com/images?q=tbn:ANd9GcRcyNRJqVLvR0sONgtKtpQ4Sqq2xjyVHWeyZhVryGgoN5ie10amVw",	
 	},
-"responseDetails": null, 
-"responseStatus": 200
+	{
+		"id":2,
+		"title":"PABLO",
+		"author":"admin",
+		"description":"Video 2",
+		"pubDate": "2012-09-06 13:34:00.2",
+		"image":"http://t1.gstatic.com/images?q=tbn:ANd9GcTx3lTJpL2ukek-lJmbuoYP0YM7WNuY89707j2mB4MuvmbTP3MB",	
+	},
+	{
+		"id":3,
+		"title":"Ana",
+		"author":"admin2",
+		"description":"Video 3",
+		"pubDate": "2012-09-06 13:34:00.0",
+		"image":"http://t0.gstatic.com/images?q=tbn:ANd9GcTFlTUTjwyHvgQNR_XMnvKZOBYsX2Xx36oV4LiqqAkh6BIq3VHY",	
+	},
+	{
+		"id":4,
+		"title":"Maria",
+		"author":"admin",
+		"description":"Video 4",
+		"pubDate": "2012-09-06 13:34:00.0",
+		"image":"http://t1.gstatic.com/images?q=tbn:ANd9GcRWj60JM_MF1oQFuY1_ZOM6GbdaPEn1j18O3mLb3sB59qr8FeRZ",	
+	},
+	{
+		"id":5,
+		"title":"Anita",
+		"author":"admin",
+		"description":"Video 1",
+		"pubDate": "2012-09-06 13:34:00.0",
+		"image":"http://t1.gstatic.com/images?q=tbn:ANd9GcS5RtmLOL-Xynyw4WWPTt896wAhEzUM2t2P4_OMOEYeyOrKlyU1",	
+	},
+	{
+		"id":6,
+		"title":"Chucho",
+		"author":"admin",
+		"description":"Video 6",
+		"pubDate": "2012-09-06 13:34:00.0",
+		"image":"http://t3.gstatic.com/images?q=tbn:ANd9GcSiQCzMisJZTTHYXV9jFwIAP4HX3u2N92h841ivXBNCLlVUH7WMPg",	
+	},
+	
+	],
+	"description": "Galería de videos",
+    "link": "http://localhost:9080/feeds/clubacademia_videos_40.json",
+    "language": "es-mx"
 }

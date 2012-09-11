@@ -25,7 +25,7 @@ Ext.define("MyApp.view.Musica", {
 	                id:'back',
 	                align: 'left',
 	                text: "Regresar",
-	                ui: "action",
+	                ui: "back",
 	            }
 	            ]
 	        },
